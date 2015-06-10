@@ -1,3 +1,32 @@
-.test {
-  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+.page{
+  .input-group{
+    input{
+      border-radius: 0;
+      border-right: none;
+      box-shadow: none;
+      transition: border-color ease-in-out 0.25s;
+
+      &:focus {
+        border-color: #ccc;
+        border-bottom-color: #66afe9;
+      }
+    }
+    .input-group-addon{
+      border-radius: 0;
+      background: transparent;
+      border-left: none;
+      box-shadow: none;
+      i{
+        opacity: 0.3;
+      }
+    }
+  }
+  button.button--wayra{
+    background: forestgreen;
+    color: white;
+
+    &:hover::before{
+      background: greenyellow;
+    }
+  }
 }

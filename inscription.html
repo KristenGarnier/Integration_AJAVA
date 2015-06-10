@@ -12,6 +12,9 @@
     <!-- Our own theme -->
     <link rel="stylesheet" href="assets/SCSS/style.css"/>
 
+    <!-- font awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+
     <!-- All the JS are downloaded asynchronously, that's a little tweek for page speed, so don't worry about JS in the head -->
     <script src="bower_components/jquery/dist/jquery.min.js" async></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" async></script>
@@ -31,53 +34,55 @@
                 <div class="col-md-4 col-md-offset-1">
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-                            <div class="input-group-addon">.00</div>
+                            <input type="email" class="form-control"  placeholder="Enter email">
+                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Mot de passe">
-                            <div class="input-group-addon">.00</div>
+                            <input type="password" class="form-control"  placeholder="Mot de passe">
+                            <div class="input-group-addon"><i class="fa fa-lock"></i></div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Confirmation mot de passe">
-                            <div class="input-group-addon">.00</div>
+                            <input type="password" class="form-control"  placeholder="Confirmation mot de passe">
+                            <div class="input-group-addon"><i class="fa fa-lock"></i></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-md-offset-1">
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Prenom">
-                            <div class="input-group-addon">.00</div>
+                            <input type="text" class="form-control"  placeholder="Prenom">
+                            <div class="input-group-addon"><i class="fa fa-user"></i></div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nom">
-                            <div class="input-group-addon">.00</div>
+                            <input type="text" class="form-control"  placeholder="Nom">
+                            <div class="input-group-addon"><i class="fa fa-user"></i></div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Telephone">
-                            <div class="input-group-addon">.00</div>
+                            <input type="number" class="form-control" placeholder="Telephone">
+                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-12">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox"> Check me out
-                        </label>
-                    </div>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox"> Check me out
-                        </label>
+                    <div class="text-center">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Check me out
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Check me out
+                            </label>
+                        </div>
                     </div>
                     <button type="submit" class=" center-block button button--wayra">Rejoindre</button>
                 </div>
