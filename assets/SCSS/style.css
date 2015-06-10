@@ -1,3 +1,12 @@
+body {
+  background: url("http://lorempixel.com/1600/800/city/color/");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.page .inscription {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 3rem 5rem; }
 .page .input-group input {
   border-radius: 0;
   border-right: none;
@@ -8,7 +17,7 @@
     border-bottom-color: #66afe9; }
 .page .input-group .input-group-addon {
   border-radius: 0;
-  background: transparent;
+  background: white;
   border-left: none;
   box-shadow: none; }
   .page .input-group .input-group-addon i {
