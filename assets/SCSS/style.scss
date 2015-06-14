@@ -4,6 +4,25 @@ body{
   background-repeat:  no-repeat;
 }
 .page{
+  .error{
+    text-transform: uppercase;
+    color: white;
+    h1{
+      font-size: 5em;
+      line-height: 20px;
+    }
+    a{
+      line-height: 100px;
+      font-size: 2em;
+      border: 4px white solid;
+      padding: 0.8rem 1.5rem;
+      color: white;
+      text-decoration: none;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
   .inscription{
     border-radius: 20px;
     background-color: rgba(255,255,255,0.4);
