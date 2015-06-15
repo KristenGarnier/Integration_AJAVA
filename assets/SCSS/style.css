@@ -9,15 +9,23 @@ body {
   .page .error h1 {
     font-size: 5em;
     line-height: 20px; }
+  .page .error h2 {
+    font-size: 1.5em;
+    font-weight: 300; }
+    .page .error h2 i {
+      font-size: 0.8em; }
   .page .error a {
     line-height: 100px;
     font-size: 2em;
     border: 4px white solid;
     padding: 0.8rem 1.5rem;
     color: white;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: all 0.3s ease-in-out; }
     .page .error a:hover {
-      text-decoration: none; }
+      text-decoration: none;
+      background: white;
+      color: grey; }
 .page .inscription {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.4);
