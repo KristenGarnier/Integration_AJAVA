@@ -4,9 +4,17 @@
   src: local('BebasNeue'); }
 
 body{
-  background: url('../img/404-min.jpg');
-  background-size: cover;
-  background-repeat:  no-repeat;
+  &.register{
+    background: url('../img/inscription-min.jpg');
+    background-size: cover;
+    background-repeat:  no-repeat;
+
+  }
+  &.err404 {
+    background: url('../img/404-min.jpg');
+    background-size: cover;
+    background-repeat:  no-repeat;
+  }
 }
 .page{
   .error{
@@ -44,7 +52,7 @@ body{
   }
   .inscription{
     border-radius: 20px;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,0.6);
     padding: 3rem 5rem;
   }
   .input-group{

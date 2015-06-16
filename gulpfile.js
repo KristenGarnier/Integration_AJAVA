@@ -16,7 +16,7 @@ gulp.task('default', ['watch'], function(){
 gulp.task('watch', ['sass'], function() {
 
     browserSync({
-        proxy: "localhost/intAJAVA/error.html"
+        proxy: "localhost/intAJAVA/inscription.html"
     });
 
     gulp.watch("assets/SCSS/*.scss", ['sass']).on('change', reload);

@@ -2,7 +2,11 @@
   font-family: "BebasNeue";
   src: url("../font/BebasNeue.otf") format("opentype");
   src: local("BebasNeue"); }
-body {
+body.register {
+  background: url("../img/inscription-min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+body.err404 {
   background: url("../img/404-min.jpg");
   background-size: cover;
   background-repeat: no-repeat; }
@@ -35,7 +39,7 @@ body {
       color: grey; }
 .page .inscription {
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 3rem 5rem; }
 .page .input-group input {
   border-radius: 0;
