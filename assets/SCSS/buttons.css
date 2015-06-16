@@ -15,7 +15,6 @@
 /* Common button styles */
 .button {
 	min-width: 150px;
-	max-width: 250px;
 	display: block;
 	margin: 1em;
 	padding: 1em 2em;

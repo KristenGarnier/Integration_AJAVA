@@ -1,41 +1,43 @@
 @font-face {
   font-family: "BebasNeue";
   src: url('../font/BebasNeue.otf') format('opentype');
-  src: local('BebasNeue'); }
+  src: local('BebasNeue');
+}
 
-body{
-  &.register{
+body {
+  &.register {
     background: url('../img/inscription-min.jpg');
     background-size: cover;
-    background-repeat:  no-repeat;
+    background-repeat: no-repeat;
 
   }
   &.err404 {
     background: url('../img/404-min.jpg');
     background-size: cover;
-    background-repeat:  no-repeat;
+    background-repeat: no-repeat;
   }
 }
-.page{
-  .error{
+
+.page {
+  .error {
     font-family: "BebasNeue";
     text-transform: uppercase;
     color: white;
-    h1{
+    h1 {
       font-size: 8em;
       line-height: 60px;
       margin-left: -3px;
     }
-    h2{
+    h2 {
       font-size: 3em;
 
       font-weight: 300;
-      i{
+      i {
         font-size: 0.6em;
         vertical-align: middle;
       }
     }
-    a{
+    a {
       line-height: 80px;
       font-size: 2.5em;
       border: 6px white solid;
@@ -43,46 +45,75 @@ body{
       color: white;
       text-decoration: none;
       transition: all 0.3s ease-in-out;
-      &:hover{
+      &:hover {
         text-decoration: none;
         background: white;
         color: grey;
       }
     }
   }
-  .inscription{
+  .inscription {
     border-radius: 20px;
-    background-color: rgba(255,255,255,0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 3rem 5rem;
-  }
-  .input-group{
-    input{
-      border-radius: 0;
-      border-right: none;
-      box-shadow: none;
-      transition: border-color ease-in-out 0.25s;
 
-      &:focus {
-        border-color: #ccc;
-        border-bottom-color: #66afe9;
-      }
+    h3 {
+      font-family: BebasNeue;
+
     }
-    .input-group-addon{
-      border-radius: 0;
-      background: white;
-      border-left: none;
-      box-shadow: none;
-      i{
-        opacity: 0.3;
+
+    .checkbox{
+      margin-top: 1rem;
+      &:last-child{
+        margin-top: 0.8rem;
+      }
+      a{
+        color: black;
+        text-decoration: underline;
+        transition: all 0.2s ease;
+        &:hover{
+          color: #79b42b;
+        }
+      }
+
+    }
+
+    button{
+      margin-top: 2.5rem;
+    }
+    .input-group {
+      margin-top: 2rem;
+      input {
+        border-radius: 0;
+        border-right: none;
+        box-shadow: none;
+        transition: border-color ease-in-out 0.25s;
+
+        &:focus {
+          border-color: #ccc;
+          border-bottom: 2px solid #79b42b
+        }
+      }
+      .input-group-addon {
+        border-radius: 0;
+        background: white;
+        border-left: none;
+        box-shadow: none;
+        i {
+          opacity: 0.3;
+        }
       }
     }
   }
-  button.button--wayra{
-    background: forestgreen;
+  button.button--wayra {
+    background: #79b42b;
+    padding: 1rem;
+    width: 30%;
     color: white;
-
-    &:hover::before{
-      background: greenyellow;
+    font-size: 1.8rem;
+    font-weight: 800;
+    &:hover::before {
+      background: #6da227;
     }
   }
 }

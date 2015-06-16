@@ -41,25 +41,45 @@ body.err404 {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.6);
   padding: 3rem 5rem; }
-.page .input-group input {
-  border-radius: 0;
-  border-right: none;
-  box-shadow: none;
-  transition: border-color ease-in-out 0.25s; }
-  .page .input-group input:focus {
-    border-color: #ccc;
-    border-bottom-color: #66afe9; }
-.page .input-group .input-group-addon {
-  border-radius: 0;
-  background: white;
-  border-left: none;
-  box-shadow: none; }
-  .page .input-group .input-group-addon i {
-    opacity: 0.3; }
+  .page .inscription h3 {
+    font-family: BebasNeue; }
+  .page .inscription .checkbox {
+    margin-top: 1rem; }
+    .page .inscription .checkbox:last-child {
+      margin-top: 0.8rem; }
+    .page .inscription .checkbox a {
+      color: black;
+      text-decoration: underline;
+      transition: all 0.2s ease; }
+      .page .inscription .checkbox a:hover {
+        color: #79b42b; }
+  .page .inscription button {
+    margin-top: 2.5rem; }
+  .page .inscription .input-group {
+    margin-top: 2rem; }
+    .page .inscription .input-group input {
+      border-radius: 0;
+      border-right: none;
+      box-shadow: none;
+      transition: border-color ease-in-out 0.25s; }
+      .page .inscription .input-group input:focus {
+        border-color: #ccc;
+        border-bottom: 2px solid #79b42b; }
+    .page .inscription .input-group .input-group-addon {
+      border-radius: 0;
+      background: white;
+      border-left: none;
+      box-shadow: none; }
+      .page .inscription .input-group .input-group-addon i {
+        opacity: 0.3; }
 .page button.button--wayra {
-  background: forestgreen;
-  color: white; }
+  background: #79b42b;
+  padding: 1rem;
+  width: 30%;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 800; }
   .page button.button--wayra:hover::before {
-    background: greenyellow; }
+    background: #6da227; }
 
 /*# sourceMappingURL=style.css.map */
