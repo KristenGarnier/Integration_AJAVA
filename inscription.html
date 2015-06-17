@@ -23,24 +23,29 @@
 <div class="page ">
     <div class="col-md-8 col-md-offset-2 inscription">
         <h3>Création d'un compte</h3>
+
         <div class="row">
             <form action="">
                 <div class="col-md-6 ">
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="email" class="form-control"  placeholder="Enter email" required>
+                            <input type="email" class="form-control" placeholder="Enter email" required>
+
                             <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="password" class="form-control"  placeholder="Mot de passe" required>
+                            <input type="password" class="form-control" placeholder="Mot de passe" required>
+
                             <div class="input-group-addon"><i class="fa fa-lock"></i></div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="password" class="form-control"  placeholder="Confirmation mot de passe" required>
+                            <input type="password" class="form-control" placeholder="Confirmation mot de passe"
+                                   required>
+
                             <div class="input-group-addon"><i class="fa fa-lock"></i></div>
                         </div>
                     </div>
@@ -48,19 +53,22 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="text" class="form-control"  placeholder="Prénom" required>
+                            <input type="text" class="form-control" placeholder="Prénom" required>
+
                             <div class="input-group-addon"><i class="fa fa-user"></i></div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <input type="text" class="form-control"  placeholder="Nom" required>
+                            <input type="text" class="form-control" placeholder="Nom" required>
+
                             <div class="input-group-addon"><i class="fa fa-user"></i></div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Téléphone (optionnel)">
+
                             <div class="input-group-addon"><i class="fa fa-phone"></i></div>
                         </div>
                     </div>
@@ -78,7 +86,15 @@
                             </label>
                         </div>
                     </div>
-                    <button type="submit" class=" center-block button button--wayra">Rejoindre</button>
+                    <div class="groupButtons col-md-12 text-center">
+                        <button type="submit" class="button button--wayra">Rejoindre</button>
+                        <button class="facebook button button--wayra" data-toggle="tooltip" data-placement="right" title="Connectez vous avec facebook">
+                            <a href="/accounts/facebook/login/?process=login">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </button>
+                    </div>
+
                 </div>
             </form>
         </div>
@@ -86,13 +102,16 @@
 </div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js" async></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/modernizr/modernizr.js" async></script>
 <!-- script qui gère le fond plein écran et le centrage du formulaire d'inscription -->
-<script src="assets/JS/placement.js"></script>
+<script src="assets/JS/placement.js" async></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 
 
 </body>
 </html>
-
-<!-- TODO Un peu de jquery pour centrer en hauteur la div + quelques annimations JS avec velocity + finir le css-->

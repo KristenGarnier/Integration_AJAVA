@@ -104,6 +104,24 @@ body {
         }
       }
     }
+    .groupButtons{
+      width: 100%;
+      .button{
+        display: inline-block;
+      }
+      .facebook{
+        margin-left: 1rem;
+        min-width: 50px;
+        width: 1rem;
+        background: #4c66a4;
+        &:hover::before{
+          background: #45538a;
+        }
+        i{
+          color: white;
+        }
+      }
+    }
   }
   button.button--wayra {
     background: #79b42b;

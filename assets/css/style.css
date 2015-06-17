@@ -75,6 +75,19 @@ body.err404 {
       box-shadow: none; }
       .page .inscription .input-group .input-group-addon i {
         opacity: 0.3; }
+  .page .inscription .groupButtons {
+    width: 100%; }
+    .page .inscription .groupButtons .button {
+      display: inline-block; }
+    .page .inscription .groupButtons .facebook {
+      margin-left: 1rem;
+      min-width: 50px;
+      width: 1rem;
+      background: #4c66a4; }
+      .page .inscription .groupButtons .facebook:hover::before {
+        background: #45538a; }
+      .page .inscription .groupButtons .facebook i {
+        color: white; }
 
 .page button.button--wayra {
   background: #79b42b;
