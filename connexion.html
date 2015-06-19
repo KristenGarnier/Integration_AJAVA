@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+
+    <!-- Button theme -->
+    <link rel="stylesheet" href="assets/SCSS/buttons.css"/>
+
+    <!-- Our own theme -->
+    <link rel="stylesheet" href="assets/css/style.css"/>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+    <!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.min.js" async></script>
+    <![endif]-->
+</head>
+<body class="register">
+
+<div class="page ">
+    <div class="col-md-8 col-md-offset-2 inscription">
+        <h3>Connexion à votre compte</h3>
+
+        <div class="row">
+            <form action="">
+                <div class="col-md-5 ">
+                    <div class="form-group text-center">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter email" required>
+
+                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="password" class="form-control" placeholder="Mot de passe" required>
+
+                            <div class="input-group-addon"><i class="fa fa-lock"></i></div>
+                        </div>
+                    </div>
+                    <div class="groupButtons col-md-12 text-center connexion">
+                        <button type="submit" class="button button--wayra">Connexion</button>
+                    </div>
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-5">
+                    <div class="groupButtons col-md-12 text-center connexion facebook">
+                        <a href="" class="button button--wayra">
+                            <p> <i class="fa fa-facebook pull-left"></i> Connexion avec Facebook</p>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/modernizr/modernizr.js" async></script>
+<!-- script qui gère le fond plein écran et le centrage du formulaire d'inscription -->
+<script src="assets/JS/placement.js" async></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+
+
+</body>
+</html>

@@ -98,3 +98,31 @@ body.err404 {
   font-weight: 800; }
   .page button.button--wayra:hover::before {
     background: #6da227; }
+
+.page .connexion {
+  padding-left: 0;
+  padding-right: 0; }
+  .page .connexion.facebook a {
+    background: #3b5998;
+    padding: 0;
+    text-decoration: none; }
+    .page .connexion.facebook a i {
+      background: #354f88;
+      font-size: 2.5rem;
+      padding: 1rem 2rem;
+      color: white; }
+    .page .connexion.facebook a p {
+      line-height: 45px;
+      vertical-align: middle;
+      margin-bottom: 0;
+      color: white;
+      padding: 0 1rem 0 0;
+      font-size: 1.5rem;
+      font-weight: 800; }
+      @media screen and (max-width: 1160px) and (min-width: 964px) {
+        .page .connexion.facebook a p {
+          font-size: 1rem; } }
+    .page .connexion.facebook a:hover::before {
+      background: #354f88; }
+  .page .connexion .button {
+    width: 100%; }
