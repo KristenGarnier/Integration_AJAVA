@@ -3,6 +3,11 @@
   src: url("../font/BebasNeue.otf") format("opentype");
   src: local("BebasNeue"); }
 
+@font-face {
+  font-family: "SignPainter";
+  src: url("../font/SignPainter.otf") format("opentype");
+  src: local("SignPainter"); }
+
 body.register {
   background: url("../img/inscription-min.jpg");
   background-size: cover;
@@ -10,6 +15,11 @@ body.register {
 
 body.err404 {
   background: url("../img/404-min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+body.connexion {
+  background: url("../img/connexion-min.png");
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -42,10 +52,49 @@ body.err404 {
 
 .page .inscription {
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 3rem 5rem; }
   .page .inscription h3 {
     font-family: BebasNeue; }
+  @media screen and (max-width: 964px) {
+    .page .inscription .fancyOu {
+      margin-top: 2rem;
+      margin-bottom: 2rem; } }
+  .page .inscription .fancyOu::before {
+    margin-bottom: 1rem;
+    content: '';
+    display: block;
+    height: 5rem;
+    width: 100%;
+    background: url("../img/separator.png");
+    background-repeat: repeat-y;
+    background-position: center; }
+    @media screen and (max-width: 964px) {
+      .page .inscription .fancyOu::before {
+        display: inline-block;
+        width: 6rem;
+        height: inherit;
+        border-top: solid 1px black;
+        margin-bottom: 0.5rem;
+        margin-right: 1rem; } }
+  .page .inscription .fancyOu::after {
+    margin-top: 1rem;
+    content: '';
+    display: block;
+    height: 5rem;
+    width: 100%;
+    background: url("../img/separator.png");
+    background-repeat: repeat-y;
+    background-position: center; }
+    @media screen and (max-width: 964px) {
+      .page .inscription .fancyOu::after {
+        width: 6rem;
+        display: inline-block;
+        height: 0;
+        border-top: solid 1px black;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        margin-left: 1rem; } }
   .page .inscription .checkbox {
     margin-top: 1rem; }
     .page .inscription .checkbox:last-child {
@@ -102,27 +151,61 @@ body.err404 {
 .page .connexion {
   padding-left: 0;
   padding-right: 0; }
-  .page .connexion.facebook a {
-    background: #3b5998;
-    padding: 0;
-    text-decoration: none; }
-    .page .connexion.facebook a i {
-      background: #354f88;
-      font-size: 2.5rem;
-      padding: 1rem 2rem;
-      color: white; }
-    .page .connexion.facebook a p {
-      line-height: 45px;
-      vertical-align: middle;
-      margin-bottom: 0;
-      color: white;
-      padding: 0 1rem 0 0;
-      font-size: 1.5rem;
-      font-weight: 800; }
-      @media screen and (max-width: 1160px) and (min-width: 964px) {
-        .page .connexion.facebook a p {
-          font-size: 1rem; } }
-    .page .connexion.facebook a:hover::before {
-      background: #354f88; }
+  .page .connexion a.mdp {
+    color: gray;
+    text-decoration: none;
+    margin-top: 2rem;
+    padding: 0; }
+    @media screen and (max-width: 964px) {
+      .page .connexion a.mdp {
+        display: block;
+        margin-top: 2rem; } }
+    .page .connexion a.mdp:hover {
+      color: black; }
+  .page .connexion.facebook {
+    margin-top: 5rem; }
+    .page .connexion.facebook a {
+      background: #3b5998;
+      padding: 0;
+      text-decoration: none; }
+      .page .connexion.facebook a i {
+        background: #354f88;
+        font-size: 2.5rem;
+        padding: 1rem 2rem;
+        color: white; }
+      .page .connexion.facebook a p {
+        line-height: 45px;
+        vertical-align: middle;
+        margin-bottom: 0;
+        color: white;
+        padding: 0 1rem 0 0;
+        font-size: 1.5rem;
+        font-weight: 800; }
+        @media screen and (max-width: 1160px) and (min-width: 964px) {
+          .page .connexion.facebook a p {
+            font-size: 1rem; } }
+      .page .connexion.facebook a:hover::before {
+        background: #354f88; }
   .page .connexion .button {
     width: 100%; }
+
+.page div.inscrire p {
+  margin-top: 15rem; }
+  @media screen and (max-width: 964px) {
+    .page div.inscrire p {
+      margin-top: 2rem; } }
+
+.page div.inscrire a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-family: SignPainter;
+  font-size: 2.5rem; }
+  .page div.inscrire a::before {
+    content: '-';
+    margin-right: 1rem; }
+  .page div.inscrire a::after {
+    content: '-';
+    margin-left: 1rem; }
+  .page div.inscrire a:hover {
+    opacity: 0.5; }
