@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Utilisateur</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+
+    <!-- Button theme -->
+    <link rel="stylesheet" href="assets/SCSS/buttons.css"/>
+
+    <!-- Our own theme -->
+    <link rel="stylesheet" href="assets/css/style.css"/>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"/>
+    <!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.min.js" async></script>
+    <![endif]-->
+</head>
+<body class="register">
+
+<div class="page ">
+    <div class="col-md-8 col-md-offset-2 inscription">
+        <h3>Mon profil</h3>
+
+        <div class="row">
+            <form action="">
+                <div class="col-md-8 ">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Enter email" required>
+
+                                    <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="password" class="form-control" placeholder="Mot de passe" required>
+
+                                    <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="date" class="form-control" placeholder="JJ/MM/AAAA" required>
+
+                                    <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Adresse email" required>
+                                    <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" placeholder="******" required>
+                                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-primary">Changer</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p>Téléphone portable</p>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="tel" class="form-control" placeholder="Numéro de téléphone" required>
+                                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <p>Remplissage du profil</p>
+                    </div>
+                    <div>
+                        <h3>Ma photo</h3>
+                        <img src="http://lorempixel.com/300/300/city/" class="img-circle imageSet" alt="image" width="120"/>
+                        <input type="file" id="profile"/>
+                    </div>
+                </div>
+                <div class="col-md-12">
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> J'accepte de recevoir la newsletter covoit-mvb pour recevoir les offres avantangeuse des partenaires AJAVA
+                            </label>
+                        </div>
+                    <div class="groupButtons col-md-12 text-center">
+                        <button type="submit" class="button button--wayra">Enregistrer les modifications</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-8 col-md-offset-2 inscription">
+        <h3>Mes trajets</h3>
+    </div>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/modernizr/modernizr.js" async></script>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+<script>
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                console.log('test');
+                $('.imageSet')
+                        .attr('src', e.target.result)
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#profile").change(function(){
+        readURL(this);
+    });
+</script>
+
+
+</body>
+</html>
