@@ -123,37 +123,89 @@
     </div>
     <div class="col-md-8 col-md-offset-2 inscription">
         <h3>Mes trajets</h3>
+        <div class="col-md-10 col-md-offset-1 voyages">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Lyon - Sallanches</h4>
+                            <h5>Lundi 7 Janvier</h5>
+                            <h5>16h00</h5>
+                        </div>
+                        <div class="col-md-3">12€</div>
+                        <div class="col-md-3">1</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Lyon - Sallanches</h4>
+                            <h5>Lundi 7 Janvier</h5>
+                            <h5>16h00</h5>
+                        </div>
+                        <div class="col-md-3">12€</div>
+                        <div class="col-md-3">1</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Lyon - Sallanches</h4>
+                            <h5>Lundi 7 Janvier</h5>
+                            <h5>16h00</h5>
+                        </div>
+                        <div class="col-md-3">12€</div>
+                        <div class="col-md-3">1</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Lyon - Sallanches</h4>
+                            <h5>Lundi 7 Janvier</h5>
+                            <h5>16h00</h5>
+                        </div>
+                        <div class="col-md-3">12€</div>
+                        <div class="col-md-3">1</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Lyon - Sallanches</h4>
+                            <h5>Lundi 7 Janvier</h5>
+                            <h5>16h00</h5>
+                        </div>
+                        <div class="col-md-3">12€</div>
+                        <div class="col-md-3">1</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Lyon - Sallanches</h4>
+                            <h5>Lundi 7 Janvier</h5>
+                            <h5>16h00</h5>
+                        </div>
+                        <div class="col-md-3">12€</div>
+                        <div class="col-md-3">1</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/modernizr/modernizr.js" async></script>
+<script src="assets/JS/imageRemplacement.js" async></script>
 
 <script>
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
-</script>
-<script>
-    function readURL(input) {
-
-        if (input.files && input.files[0]) {
-            var reader = new FileReader();
-
-            reader.onload = function (e) {
-                console.log('test');
-                $('.imageSet')
-                        .attr('src', e.target.result)
-            }
-
-            reader.readAsDataURL(input.files[0]);
-        }
-    }
-
-    $("#profile").change(function(){
-        readURL(this);
-    });
 </script>
 
 
