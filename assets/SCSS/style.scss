@@ -178,6 +178,71 @@ body {
         }
       }
     }
+
+    .voyages{
+      &.cache{
+        display:none;
+      }
+      .elem{
+        margin: 0.5rem 0rem;
+        .row{
+          border-radius: 5px;
+          margin-right: 0;
+          background: rgba(255,255,255,0.5);
+          div:nth-child(2){
+            border-right: solid darkgrey 2px;
+            border-left: solid darkgrey 2px;
+          }
+          div:nth-child(3){
+            i{
+              margin-left: 0.5rem;
+            }
+          }
+          h4::before{
+            content:'\f041';
+            color: darkgray;
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            display: inline-block;
+            text-decoration: inherit;
+            margin-right: 0.5rem;
+          }
+          h5.date::before{
+            content:"\f073";
+            color: darkgray;
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            display: inline-block;
+            text-decoration: inherit;
+            margin-right: 0.5rem;
+          }
+          h5.heure::before{
+            content:"\f017";
+            color: darkgray;
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            display: inline-block;
+            text-decoration: inherit;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+    .arrow-nav{
+      font-size: 2em;
+      transition: opacity ease 0.2s;
+
+      .arrow-left{
+        display: none;
+      }
+
+      &:hover{
+        opacity: 0.5;
+      }
+    }
   }
   button.button--wayra {
     background: #79b42b;
