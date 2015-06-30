@@ -15,9 +15,18 @@ function verticalAlign(){
 
         console.log(final);
 
-        $(this).css({
-            'marginTop': final
-        });
+        if($(window).width() <= 991 && $(this).data('pos')){ // Vérification si l'attribut est une flèche ( seul les fleches ont des data-pos)
+
+            $(this).css({
+                'marginTop': 0
+            });
+
+        }else{
+            $(this).css({
+                'marginTop': final
+            });
+        }
+
     });
 }
 

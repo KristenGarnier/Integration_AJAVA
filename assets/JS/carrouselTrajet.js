@@ -15,16 +15,16 @@ $(".arrow-nav").on('click', function () {
 });
 
 function navigationTrajet(arrow) {
-    var height = $(".voyages").parent().height();
-    $(".voyages").parent().css({
-        'minHeight': height
-    });
-    var $selector;
-    $(".voyages").each(function () {
-        if (!$(this).hasClass('cache')) {
-            $selector = $(this);
-        }
-    });
+        var height = $(".voyages").parent().height();
+        $(".voyages").parent().css({
+            'minHeight': height
+        });
+        var $selector;
+        $(".voyages").each(function () {
+            if (!$(this).hasClass('cache')) {
+                $selector = $(this);
+            }
+        });
     $selector.fadeOut("slow", function () {
         if (arrow == 'right') {
             $selector.addClass('cache');
