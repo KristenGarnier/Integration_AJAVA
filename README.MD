@@ -15,3 +15,6 @@ DONE :
 * Page error 404
 * Page inscription
 * page connexion
+
+
+/!\ Changement dans le fichier imageRemplacement.js 

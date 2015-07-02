@@ -64,10 +64,40 @@ body {
       }
     }
   }
+  .pad-element.inscription{
+    margin-top: 5rem;
+  }
+
   .inscription {
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.7);
     padding: 3rem 5rem;
+
+
+
+    form.modif{
+      label {
+        font-weight: 400;
+        &.telephone{
+          margin-top: 1.2rem;
+        }
+      }
+
+      .input-group{
+        margin-top: 0.5rem;
+      }
+      p.changer{
+        margin-top: 3rem;
+      }
+
+      button.button--wayra::before{
+        background: #2882aa;
+      }
+      button.button--wayra{
+        font-size: 1.5rem;
+        background: #3399cc;
+      }
+    }
 
     h3 {
       font-family: BebasNeue;
@@ -336,5 +366,26 @@ body {
         opacity: 0.5;
       }
     }
+  }
+}
+
+
+
+
+.file-upload-input {
+  display: none;
+}
+
+.file-upload-button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: #3399cc;
+  transition: all ease 0.2s;
+  padding: 0.5rem 1.5rem;
+
+  &:hover{
+    background: darken(#3399cc, 5);
   }
 }

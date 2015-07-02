@@ -21,16 +21,17 @@
 <body class="register">
 
 <div class="page ">
-    <div class="col-md-8 col-md-offset-2 inscription">
+    <div class="col-md-8 col-md-offset-2 inscription pad-element">
         <h3>Mon profil</h3>
 
         <div class="row">
-            <form action="">
+            <form action="" class="modif">
                 <div class="col-md-8 ">
                     <div class="row">
                         <div class="col-md-6">
 
                             <div class="form-group">
+                                <label for="">Nom</label>
                                 <div class="input-group">
                                     <input type="email" class="form-control" placeholder="Enter email" required>
 
@@ -40,6 +41,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label for="">Prénom</label>
                                 <div class="input-group">
                                     <input type="password" class="form-control" placeholder="Mot de passe" required>
 
@@ -49,6 +51,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
+                                <label for="">Date de naissance</label>
                                 <div class="input-group">
                                     <input type="date" class="form-control" placeholder="JJ/MM/AAAA" required>
 
@@ -58,6 +61,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
+                                <label for="">Adresse Email</label>
                                 <div class="input-group">
                                     <input type="email" class="form-control" placeholder="Adresse email" required>
                                     <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
@@ -66,29 +70,30 @@
                         </div>
                         <div class="col-md-12">
                             <div class="row">
-                                <div class="col-md-8">
+                                <div class="col-md-8 col-xs-8">
                                     <div class="form-group">
+                                        <label for="">Mot de passe</label>
                                         <div class="input-group">
-                                            <input type="password" class="form-control" placeholder="******" required>
-                                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                                            <input type="password" id="password" class="form-control" placeholder="******" disabled>
+                                            <div class="input-group-addon"><i class="fa fa-lock"></i></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <button class="btn btn-primary">Changer</button>
+                                <div class="col-md-4 col-xs-4">
+                                    <p class="btn btn-primary changer">Changer</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <p>Téléphone portable</p>
+                                    <label class="telephone" for="">Téléphone Portable</label>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="form-group">
                                         <div class="input-group">
                                             <input type="tel" class="form-control" placeholder="Numéro de téléphone" required>
-                                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
                                         </div>
                                     </div>
                                 </div>
@@ -98,12 +103,14 @@
                 </div>
                 <div class="col-md-4">
                     <div>
-                        <p>Remplissage du profil</p>
+                        <h3 class="text-center">Remplissage du profil</h3>
                     </div>
                     <div>
-                        <h3>Ma photo</h3>
-                        <img src="http://lorempixel.com/300/300/city/" class="img-circle imageSet" alt="image" width="120"/>
-                        <input type="file" id="profile"/>
+                        <h3 class="text-center">Ma photo</h3>
+                        <img src="http://lorempixel.com/300/300/city/" class="img-circle imageSet center-block" alt="image" width="120"/>
+                        <div class="custom-file-upload center-block">
+                            <input type="file" id="file" class="center-block"  />
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-12">
@@ -121,7 +128,7 @@
             </form>
         </div>
     </div>
-    <div class="col-md-8 col-md-offset-2 inscription">
+    <div class="col-md-8 col-md-offset-2 inscription pad-element">
         <h3>Mes trajets</h3>
         <div class="col-md-1 vertical-align arrow-nav " data-pos="left"><i class="fa fa-arrow-left arrow-left"></i></div>
         <div class="col-md-10">
@@ -310,6 +317,148 @@
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     })
+
+    $('.changer').on('click', function(e){
+        e.preventDefault();
+        $(this).fadeOut('fast',function(){
+            $('#password').removeAttr('disabled').parent().parent().parent().addClass('col-md-12').removeClass('col-md-8').removeClass('col-xs-8');
+        });
+    })
+</script>
+
+<script type="text/javascript">
+    //Reference:
+    //http://www.onextrapixel.com/2012/12/10/how-to-create-a-custom-file-input-with-jquery-css3-and-php/
+    ;(function($) {
+
+        // Browser supports HTML5 multiple file?
+        var multipleSupport = typeof $('<input/>')[0].multiple !== 'undefined',
+                isIE = /msie/i.test( navigator.userAgent );
+
+        $.fn.customFile = function() {
+
+            return this.each(function() {
+
+                var $file = $(this).addClass('custom-file-upload-hidden'), // the original file input
+                        $wrap = $('<div class="file-upload-wrapper">'),
+                        $input = $('<input type="text" class="file-upload-input" />'),
+                // Button that will be used in non-IE browsers
+                        $button = $('<button type="button" class="btn btn-primary center-block">Upload</button>'),
+                // Hack for IE
+                        $label = $('<label class="file-upload-button" for="'+ $file[0].id +'">Select a File</label>');
+
+                // Hide by shifting to the left so we
+                // can still trigger events
+                $file.css({
+                    position: 'absolute',
+                    left: '-9999px'
+                });
+
+                $wrap.insertAfter( $file )
+                        .append( $file, $input, ( isIE ? $label : $button ) );
+
+                // Prevent focus
+                $file.attr('tabIndex', -1);
+                $button.attr('tabIndex', -1);
+
+                $button.click(function () {
+                    $file.focus().click(); // Open dialog
+                });
+
+                $file.change(function() {
+
+                    var files = [], fileArr, filename;
+
+                    // If multiple is supported then extract
+                    // all filenames from the file array
+                    if ( multipleSupport ) {
+                        fileArr = $file[0].files;
+                        for ( var i = 0, len = fileArr.length; i < len; i++ ) {
+                            files.push( fileArr[i].name );
+                        }
+                        filename = files.join(', ');
+
+                        // If not supported then just take the value
+                        // and remove the path to just show the filename
+                    } else {
+                        filename = $file.val().split('\\').pop();
+                    }
+
+                    $input.val( filename ) // Set the value
+                            .attr('title', filename) // Show filename in title tootlip
+                            .focus(); // Regain focus
+
+                });
+
+                $input.on({
+                    blur: function() { $file.trigger('blur'); },
+                    keydown: function( e ) {
+                        if ( e.which === 13 ) { // Enter
+                            if ( !isIE ) { $file.trigger('click'); }
+                        } else if ( e.which === 8 || e.which === 46 ) { // Backspace & Del
+                            // On some browsers the value is read-only
+                            // with this trick we remove the old input and add
+                            // a clean clone with all the original events attached
+                            $file.replaceWith( $file = $file.clone( true ) );
+                            $file.trigger('change');
+                            $input.val('');
+                        } else if ( e.which === 9 ){ // TAB
+                            return;
+                        } else { // All other keys
+                            return false;
+                        }
+                    }
+                });
+
+            });
+
+        };
+
+        // Old browser fallback
+        if ( !multipleSupport ) {
+            $( document ).on('change', 'input.customfile', function() {
+
+                var $this = $(this),
+                // Create a unique ID so we
+                // can attach the label to the input
+                        uniqId = 'customfile_'+ (new Date()).getTime(),
+                        $wrap = $this.parent(),
+
+                // Filter empty input
+                        $inputs = $wrap.siblings().find('.file-upload-input')
+                                .filter(function(){ return !this.value }),
+
+                        $file = $('<input type="file" id="'+ uniqId +'" name="'+ $this.attr('name') +'"/>');
+
+                // 1ms timeout so it runs after all other events
+                // that modify the value have triggered
+                setTimeout(function() {
+                    // Add a new input
+                    if ( $this.val() ) {
+                        // Check for empty fields to prevent
+                        // creating new inputs when changing files
+                        if ( !$inputs.length ) {
+                            $wrap.after( $file );
+                            $file.customFile();
+                        }
+                        // Remove and reorganize inputs
+                    } else {
+                        $inputs.parent().remove();
+                        // Move the input so it's always last on the list
+                        $wrap.appendTo( $wrap.parent() );
+                        $wrap.find('input').focus();
+                    }
+                }, 1);
+
+            });
+        }
+
+    }(jQuery));
+
+    $('input[type=file]').customFile();
+</script>
+
+<script>
 </script>
 
 

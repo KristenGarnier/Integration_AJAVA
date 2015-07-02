@@ -1,4 +1,5 @@
-$("#profile").change(function(){
+$("#file").change(function(){
+    console.log('test');
     readURL(this);
 });
 
