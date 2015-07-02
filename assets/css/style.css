@@ -8,6 +8,13 @@
   src: url("../font/SignPainter.otf") format("opentype");
   src: local("SignPainter"); }
 
+body.user {
+  background-color: white;
+  background: url("../img/utilisateur.png");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat; }
+
 body.register {
   background: url("../img/inscription-min.jpg");
   background-size: cover;
@@ -51,7 +58,8 @@ body.connexion {
       color: grey; }
 
 .page .pad-element.inscription {
-  margin-top: 5rem; }
+  margin-top: 5rem;
+  background-color: rgba(230, 230, 230, 0.7); }
 
 .page .inscription {
   border-radius: 20px;

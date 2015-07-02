@@ -11,6 +11,14 @@
 }
 
 body {
+  &.user {
+    background-color: white;
+    background: url('../img/utilisateur.png');
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+
   &.register {
     background: url('../img/inscription-min.jpg');
     background-size: cover;
@@ -66,6 +74,7 @@ body {
   }
   .pad-element.inscription{
     margin-top: 5rem;
+    background-color: rgba(230, 230, 230, 0.7);
   }
 
   .inscription {
