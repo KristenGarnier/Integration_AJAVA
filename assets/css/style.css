@@ -294,3 +294,6 @@ body.connexion {
   padding: 0.5rem 1.5rem; }
   .file-upload-button:hover {
     background: #2e8ab8; }
+
+.amcharts-chart-div a {
+  display: none; }
