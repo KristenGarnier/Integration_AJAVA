@@ -297,3 +297,6 @@ body.connexion {
 
 .amcharts-chart-div a {
   display: none; }
+
+.inline {
+  display: inline-block; }
