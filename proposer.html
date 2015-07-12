@@ -24,8 +24,8 @@
     <div class="container">
         <div class="col-md-12 inscription pad-element">
             <div class="row">
-                <form action="" class="modif">
-                    <div class="col-md-6 ">
+                <div class="col-md-6 ">
+                    <form action="" class="modif proposer">
                         <div class="row">
                             <div>
                                 <h3>Itinéraire</h3>
@@ -137,7 +137,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-2">
-                                                        h
+                                                        <p class="heure-middle">h</p>
                                                     </div>
                                                     <div class="col-md-5">
                                                         <div class="input-group col-md-12">
@@ -213,21 +213,35 @@
 
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox"> J'accepte les conditions du <a href="">guide du covoitureur</a>
+                                    <input type="checkbox"> J'accepte les conditions du <a href="">guide du
+                                    covoitureur</a>
                                 </label>
                             </div>
                         </div>
                         <div class="groupButtons col-md-12 text-center">
                             <button type="submit" class="button button--wayra">Continuer</button>
                         </div>
+                    </form>
+                </div>
+                <div class="col-md-6 black-bg">
+                    <h3 class="white">Votre trajet</h3>
+                    <div class="map"></div>
+                    <div class="weather">
+                        <h4>Météo du trajet  / <strong>Ville du trajet</strong></h4>
+                        <div class="row">
+                            <div class="col-md-6 text-center"><i class="fa fa-cloud"></i></div>
+                            <div class="col-md-6 text-center">
+                                <p><span>8°</span> pluie</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="link text-center">
+                        <a href="#">Déplacement professionnel ? Téléchargez un justificatif</a>
                     </div>
+                </div>
 
-                </form>
+
             </div>
-
-
 
 
         </div>
@@ -239,7 +253,7 @@
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/modernizr/modernizr.js" async></script>
-<script src="assets/JS/imageRemplacement.js" async></script>
+<script src="assets/JS/placement.js" async></script>
 <script src="assets/JS/verticalAlign.js" async></script>
 <script src="assets/JS/carrouselTrajet.js" async></script>
 <script src="assets/JS/personalisedFileInput.js" async></script>

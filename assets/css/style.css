@@ -65,6 +65,26 @@ body.connexion {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.7);
   padding: 3rem 5rem; }
+  .page .inscription .proposer label {
+    margin-top: 1rem; }
+  .page .inscription .proposer p.heure-middle {
+    margin-top: 1rem; }
+  .page .inscription .black-bg a:hover {
+    text-decoration: none; }
+  .page .inscription .black-bg .weather {
+    color: white;
+    padding: 2rem 2rem;
+    background: deepskyblue;
+    margin-bottom: 2rem; }
+    .page .inscription .black-bg .weather i {
+      font-size: 6rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem; }
+    .page .inscription .black-bg .weather p {
+      margin-top: 1.7rem;
+      font-size: 1.5em; }
+      .page .inscription .black-bg .weather p span {
+        font-size: 2em; }
   .page .inscription form.modif label {
     font-weight: 400; }
     .page .inscription form.modif label.telephone {
@@ -300,3 +320,10 @@ body.connexion {
 
 .inline {
   display: inline-block; }
+
+.black-bg {
+  padding: 3rem;
+  background: black; }
+
+.white {
+  color: white; }
