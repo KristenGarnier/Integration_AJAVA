@@ -59,8 +59,8 @@
                                             <div class="col-md-4">
                                                 <label>Point de départ</label>
                                             </div>
-                                            <div class="col-md-8">
-                                                <div class="input-group col-md-12">
+                                            <div class="col-md-8 col-xs-12">
+                                                <div class="input-group col-md-12 col-xs-12">
                                                     <select class="form-control ">
                                                         <option value="default"></option>
                                                         <option>1</option>
@@ -82,8 +82,8 @@
                                             <div class="col-md-4">
                                                 <label>Point d'arrivée</label>
                                             </div>
-                                            <div class="col-md-8">
-                                                <div class="input-group col-md-12">
+                                            <div class="col-md-8 col-xs-12">
+                                                <div class="input-group col-md-12 col-xs-12">
                                                     <select class="form-control ">
                                                         <option value="default"></option>
                                                         <option>1</option>
@@ -105,8 +105,8 @@
                                             <div class="col-md-4">
                                                 <label>Etape du trajet</label>
                                             </div>
-                                            <div class="col-md-8">
-                                                <div class="input-group col-md-12">
+                                            <div class="col-md-8 col-xs-12">
+                                                <div class="input-group col-md-12 col-xs-12">
                                                     <select class="form-control ">
                                                         <option value="default"></option>
                                                         <option>1</option>
@@ -132,7 +132,7 @@
                                             <div class="col-md-4">
                                                 <label>Date du trajet</label>
                                             </div>
-                                            <div class="col-md-8">
+                                            <div class="col-md-8 col-xs-12">
                                                 <div class="input-group">
                                                     <input type="date" class="form-control" placeholder="JJ/MM/AAAA"
                                                            required>
@@ -176,8 +176,8 @@
                                             <div class="col-md-4">
                                                 <label>Nombres de places</label>
                                             </div>
-                                            <div class="col-md-8">
-                                                <div class="input-group col-md-12">
+                                            <div class="col-md-8 col-xs-12">
+                                                <div class="input-group col-md-12 col-xs-12">
                                                     <select class="form-control ">
                                                         <option value="default"></option>
                                                         <option>1</option>
@@ -199,9 +199,9 @@
                                             <div class="col-md-4">
                                                 <label>Prix par passager</label>
                                             </div>
-                                            <div class="col-md-8">
-                                                <div class="input-group col-md-12">
-                                                    <div class="input-group col-md-12">
+                                            <div class="col-md-8 col-xs-12">
+                                                <div class="input-group col-md-12 col-xs-12">
+                                                    <div class="input-group col-md-12 col-xs-12">
                                                         <select class="form-control ">
                                                             <option value="default"></option>
                                                             <option>1</option>
@@ -302,7 +302,7 @@
 
     function checkInput() {
         var input = 0;
-        var total = 7;
+        var total = 8;
 
         $('input:not(input.checkbox-not)').each(function () {
             if ($(this).val() != '') {
@@ -313,6 +313,12 @@
                 }
             }
         });
+
+        console.log($('input.checkbox-not')[0].checked);
+
+        if($('input.checkbox-not')[0].checked){
+            input ++;
+        }
 
 
         $('select').each(function () {
@@ -353,10 +359,12 @@
 
     });
 
-    $('#datetimepicker3').click(function () {
+    $('#datetimepicker3, .checkbox-not').on( 'click', function () {
         checkInput();
 
     });
+
+
 </script>
 
 <script>

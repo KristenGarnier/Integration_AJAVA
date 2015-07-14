@@ -101,6 +101,9 @@ body.proposer {
       font-size: 1.5em; }
       .page .inscription .black-bg .weather p span {
         font-size: 2em; }
+  @media screen and (max-width: 991px) {
+    .page .inscription .black-bg {
+      margin-top: 5rem; } }
   .page .inscription form.modif label {
     font-weight: 400; }
     .page .inscription form.modif label.telephone {
