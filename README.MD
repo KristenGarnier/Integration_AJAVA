@@ -16,6 +16,4 @@ DONE :
 * Page inscription
 * page connexion
 * Page utilisateur
-
-
-/!\ Changement dans le fichier imageRemplacement.js 
+* Page Proposer

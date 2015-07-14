@@ -30,6 +30,10 @@ body.connexion {
   background-size: cover;
   background-repeat: no-repeat; }
 
+body.proposer {
+  background: white;
+  padding-bottom: 10rem; }
+
 .page .error {
   font-family: "BebasNeue";
   text-transform: uppercase;
@@ -60,6 +64,18 @@ body.connexion {
 .page .pad-element.inscription {
   margin-top: 5rem;
   background-color: rgba(230, 230, 230, 0.7); }
+
+.page .header {
+  background: url("../img/proposer-min.png");
+  background-position: bottom;
+  background-size: cover;
+  font-family: BebasNeue; }
+  .page .header h1 {
+    margin-top: 15rem;
+    margin-bottom: 25rem;
+    color: white;
+    padding: 1rem 2rem;
+    border: 4px solid white; }
 
 .page .inscription {
   border-radius: 20px;
@@ -327,3 +343,9 @@ body.connexion {
 
 .white {
   color: white; }
+
+.progress-bar {
+  background: #3399cc; }
+
+body.proposer div.inscription {
+  background-color: transparent !important; }
