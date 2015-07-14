@@ -1,6 +1,6 @@
 {
   "name": "Intégration AJAVA",
   "dependencies": {
-
+    "eonasdan-bootstrap-datetimepicker": "~4.14.30"
   }
 }
