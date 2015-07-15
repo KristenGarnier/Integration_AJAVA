@@ -58,6 +58,15 @@ $('#depart').change(function () {
 
 $('#arrivee').change(function () {
     dest = [$(this).find(':selected').data('lat'), $(this).find(':selected').data('long')];
+    $.getJSON('http://api.openweathermap.org/data/2.5/weather?lat=' + dest[0] + '&lon=' + dest[1]+'&units=metric&lang=fr', function(data){
+        console.log(data);
+        var temperature = data.main.temp_max.toString().slice(0,2);
+        var description = data.weather[0].description;
+        var icon = data.weather[0].main.toLowerCase();
+        $('#temperature').html(temperature);
+        $('#description').html(description);
+        console.log(temperature, description);
+    });
     testNewCard();
 });
 $('#etape').change(function () {
@@ -77,14 +86,3 @@ function testNewCard() {
         }
     }
 }
-
-// On récupère les valeurs dans les champs,
-// Si au moins point de départ et de destination son renseignés on affiche la route,
-// on prend pour origine de la carte le point de départ
-// Si une étape est définie, on réaffiche la carte
-
-// une fois que le point d'arrivée est définit, on va chercher la météo dans le weather
-
-// COORD LYON [45.75,4.85]
-// COORD GRENOBLE [45.188529, 5.724523999999974]
-// COORD CHAMBERY [45.564601, 5.917780999999991]
