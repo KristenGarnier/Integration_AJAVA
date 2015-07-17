@@ -1,4 +1,4 @@
-function next(lat, lng, origin, dest, etape) {
+function next(lat, lng, origin, dest, etapeNext) {
     var map = new GMaps({
         div: '#map-canvas',
         lat: 45.5667 || lat,
@@ -6,8 +6,11 @@ function next(lat, lng, origin, dest, etape) {
         zoom: 7
     });
 
+    console.log(origin, dest ,etapeNext, 'test');
 
-    if (origin !== undefined && dest !== undefined && etape === undefined) {
+
+    if (origin !== undefined && dest !== undefined && etapeNext === undefined) {
+
         map.drawRoute({
             origin: origin,
             destination: dest,
@@ -18,10 +21,11 @@ function next(lat, lng, origin, dest, etape) {
         });
 
     } else {
-        if (origin !== undefined && dest !== undefined && etape !== undefined) {
+        if (origin !== undefined && dest !== undefined && etapeNext !== undefined) {
+            console.log('test');
             map.drawRoute({
                 origin: origin,
-                destination: etape,
+                destination: etapeNext,
                 travelMode: 'driving',
                 strokeColor: '#131540',
                 strokeOpacity: 0.6,
@@ -29,7 +33,7 @@ function next(lat, lng, origin, dest, etape) {
             });
 
             map.drawRoute({
-                origin: etape,
+                origin: etapeNext,
                 destination: dest,
                 travelMode: 'driving',
                 strokeColor: '#131540',
@@ -45,37 +49,41 @@ next();
 
 
 
-var origin;
-var dest;
-var etape;
+var origin = undefined;
+var dest = undefined;
+var etape = undefined;
 
 
 $('#depart').change(function () {
-    console.log($(this));
+    console.log('change dep');
+    //console.log($(this));
     origin = [$(this).find(':selected').data('lat'), $(this).find(':selected').data('long')];
     testNewCard();
 });
 
 $('#arrivee').change(function () {
+    console.log('change dest');
     dest = [$(this).find(':selected').data('lat'), $(this).find(':selected').data('long')];
     $.getJSON('http://api.openweathermap.org/data/2.5/weather?lat=' + dest[0] + '&lon=' + dest[1]+'&units=metric&lang=fr', function(data){
-        console.log(data);
+        //console.log(data);
         var temperature = data.main.temp_max.toString().slice(0,2);
         var description = data.weather[0].description;
-        var icon = data.weather[0].main.toLowerCase();
+        var icon = data.weather[0].icon;
         $('#temperature').html(temperature);
         $('#description').html(description);
-        console.log(temperature, description);
+        $('#weather-icon').html('<img src="http://openweathermap.org/img/w/'+ icon +'.png" alt="icon weather" />');
+        //console.log(temperature, description, icon);
     });
     testNewCard();
 });
 $('#etape').change(function () {
+    console.log('change');
     etape = [$(this).find(':selected').data('lat'), $(this).find(':selected').data('long')];
     testNewCard();
 });
 
 function testNewCard() {
-    console.log(origin, dest, etape);
+
     if (origin !== undefined && dest !== undefined && etape === undefined) {
         console.log('1');
         next(origin[0], origin[1], origin, dest);
@@ -86,3 +94,4 @@ function testNewCard() {
         }
     }
 }
+

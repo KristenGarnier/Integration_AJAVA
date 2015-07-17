@@ -1,5 +1,4 @@
 $("#file").change(function(){
-    console.log('test');
     readURL(this);
 });
 

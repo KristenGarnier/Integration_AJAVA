@@ -96,6 +96,11 @@ body.proposer {
       font-size: 6rem;
       margin-top: 2rem;
       margin-bottom: 2rem; }
+    .page .inscription .black-bg .weather img {
+      width: 50%; }
+      @media screen and (max-width: 991px) {
+        .page .inscription .black-bg .weather img {
+          width: 25%; } }
     .page .inscription .black-bg .weather p {
       margin-top: 1.7rem;
       font-size: 1.5em; }

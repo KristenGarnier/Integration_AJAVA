@@ -128,7 +128,7 @@
                                             </div>
                                             <div class="col-md-8 col-xs-12">
                                                 <div class="input-group">
-                                                    <input type="date" class="form-control" placeholder="JJ/MM/AAAA"
+                                                    <input type="text" class="form-control" placeholder="JJ/MM/AAAA" id="datetimepicker2"
                                                            required>
 
                                                     <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
@@ -147,8 +147,8 @@
 
 
                                                 <div class="form-group">
-                                                    <div class='input-group date' id='datetimepicker3'>
-                                                        <input type='text' class="form-control"/>
+                                                    <div class='input-group date' >
+                                                        <input type='text' class="form-control" id='datetimepicker3'/>
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-time"></span>
                     </span>
@@ -242,7 +242,7 @@
                         <h4>Météo du trajet / <strong>Ville du trajet</strong></h4>
 
                         <div class="row">
-                            <div class="col-md-6 text-center"><i id="weather-icon" class="fa fa-sun-o"></i></div>
+                            <div class="col-md-6 text-center" id="weather-icon"><i class="fa fa-sun-o"></i></div>
                             <div class="col-md-6 text-center">
                                 <p><span><b id="temperature">28</b>°</span> <b id="description">ensoleillé</b></p>
                             </div>
@@ -280,6 +280,12 @@
             locale: 'fr'
         });
     });
+
+    $(function () {
+        $('#datetimepicker2').datetimepicker({
+            locale: 'fr'
+        });
+    });
 </script>
 
 <script>
@@ -305,12 +311,12 @@
 
                 if (input == 0 || input < total) {
                     input++;
-                    console.log(this);
+
                 }
             }
         });
 
-        console.log($('input.checkbox-not')[0].checked);
+
 
         if($('input.checkbox-not')[0].checked){
             input ++;
@@ -322,12 +328,12 @@
 
                 if (input == 0 || input < total) {
                     input++;
-                    console.log(this);
+
                 }
             }
         });
 
-        console.log(input);
+
 
 
         var final = (input / (total  )) * 100;
@@ -355,7 +361,7 @@
 
     });
 
-    $('#datetimepicker3, .checkbox-not').on( 'click', function () {
+    $('#datetimepicker3, #datetimepicker2, .checkbox-not').on( 'click', function () {
         checkInput();
 
     });
