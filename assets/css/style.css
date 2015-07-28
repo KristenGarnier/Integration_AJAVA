@@ -14,6 +14,8 @@ body.user {
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat; }
+  body.user.page {
+    padding-bottom: 75px; }
 
 body.register {
   background: url("../img/inscription-min.jpg");
@@ -34,296 +36,373 @@ body.proposer {
   background: white;
   padding-bottom: 10rem; }
 
-.page .error {
+/*/////////////HEADER\\\\\\\\\\\\\\\*/
+header {
   font-family: "BebasNeue";
   text-transform: uppercase;
-  color: white; }
-  .page .error h1 {
-    font-size: 8em;
-    line-height: 60px;
-    margin-left: -3px; }
-  .page .error h2 {
-    font-size: 3em;
-    font-weight: 300; }
-    .page .error h2 i {
-      font-size: 0.6em;
-      vertical-align: middle; }
-  .page .error a {
-    line-height: 80px;
-    font-size: 2.5em;
-    border: 6px white solid;
-    padding: 0.2rem 2rem;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out; }
-    .page .error a:hover {
+  font-size: 1.3em; }
+  header nav {
+    background-color: white !important;
+    border-color: white !important;
+    background-color: white;
+    height: 75px; }
+    header nav img {
+      vertical-align: middle;
+      margin-left: 5rem; }
+    header nav .navbar-toggle {
+      border: none;
+      background: transparent;
+      margin-top: 2rem; }
+      header nav .navbar-toggle span {
+        background: black !important;
+        transition: all ease-in-out 0.2s; }
+      header nav .navbar-toggle span:nth-child(2) {
+        transform: translateY(-140px); }
+      header nav .navbar-toggle span:nth-child(3) {
+        transform: rotate(45deg) translateX(-3px); }
+      header nav .navbar-toggle span:nth-child(4) {
+        transform: rotate(-45deg) translateY(-7px) translateX(3px); }
+      header nav .navbar-toggle.collapsed {
+        background: transparent; }
+        header nav .navbar-toggle.collapsed span:nth-child(2) {
+          transform: translateY(0px); }
+        header nav .navbar-toggle.collapsed span:nth-child(3) {
+          transform: rotate(0deg) translateX(0px); }
+        header nav .navbar-toggle.collapsed span:nth-child(4) {
+          transform: rotate(0deg) translateY(0px) translateX(0px); }
+      header nav .navbar-toggle:hover {
+        background: transparent !important; }
+      header nav .navbar-toggle:focus {
+        background: transparent !important; }
+    @media screen and (max-width: 764px) {
+      header nav .navbar-collapse {
+        margin-top: 1.5rem;
+        background-color: white;
+        border-color: white !important; } }
+    header nav .navbar-right {
+      margin-top: 1.5rem; }
+      header nav .navbar-right li {
+        text-align: center;
+        margin-right: 5rem; }
+        @media screen and (max-width: 1040px) {
+          header nav .navbar-right li {
+            margin-right: 1.5rem; } }
+        @media screen and (max-width: 764px) {
+          header nav .navbar-right li {
+            margin-right: 0;
+            margin-top: 2rem; } }
+        header nav .navbar-right li:last-child {
+          margin-left: 12em; }
+          @media screen and (max-width: 1040px) {
+            header nav .navbar-right li:last-child {
+              margin-left: 2rem; } }
+          @media screen and (max-width: 764px) {
+            header nav .navbar-right li:last-child {
+              margin-left: 0rem;
+              margin-top: 2rem; } }
+        header nav .navbar-right li:nth-child(3) {
+          margin-right: 0; }
+        header nav .navbar-right li a {
+          color: black !important; }
+        header nav .navbar-right li button {
+          color: white;
+          margin-top: 0.4rem;
+          font-size: 1em;
+          border: none;
+          border-radius: 0;
+          padding-left: 4rem;
+          padding-right: 4rem;
+          background-color: #337ab7;
+          transition: all ease-in-out 0.2s; }
+          header nav .navbar-right li button:hover {
+            color: white;
+            background-color: #285f8f; }
+
+.page {
+  margin-top: 75px; }
+  .page .error {
+    font-family: "BebasNeue";
+    text-transform: uppercase;
+    color: white; }
+    .page .error h1 {
+      font-size: 8em;
+      line-height: 60px;
+      margin-left: -3px; }
+    .page .error h2 {
+      font-size: 3em;
+      font-weight: 300; }
+      .page .error h2 i {
+        font-size: 0.6em;
+        vertical-align: middle; }
+    .page .error a {
+      line-height: 80px;
+      font-size: 2.5em;
+      border: 6px white solid;
+      padding: 0.2rem 2rem;
+      color: white;
       text-decoration: none;
-      background: white;
-      color: grey; }
-
-.page .pad-element.inscription {
-  margin-top: 5rem;
-  background-color: rgba(230, 230, 230, 0.7); }
-
-.page .header {
-  background: url("../img/proposer-min.png");
-  background-position: bottom;
-  background-size: cover;
-  font-family: BebasNeue; }
-  .page .header h1 {
-    margin-top: 15rem;
-    margin-bottom: 25rem;
-    color: white;
-    padding: 1rem 2rem;
-    border: 4px solid white; }
-
-.page .inscription {
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 3rem 5rem; }
-  .page .inscription .proposer label {
-    margin-top: 1rem; }
-  .page .inscription .proposer p.heure-middle {
-    margin-top: 1rem; }
-  .page .inscription .black-bg a:hover {
-    text-decoration: none; }
-  .page .inscription .black-bg .weather {
-    color: white;
-    padding: 2rem 2rem;
-    background: deepskyblue;
-    margin-bottom: 2rem; }
-    .page .inscription .black-bg .weather i {
-      font-size: 6rem;
-      margin-top: 2rem;
-      margin-bottom: 2rem; }
-    .page .inscription .black-bg .weather img {
-      width: 50%; }
-      @media screen and (max-width: 991px) {
-        .page .inscription .black-bg .weather img {
-          width: 25%; } }
-    .page .inscription .black-bg .weather p {
-      margin-top: 1.7rem;
-      font-size: 1.5em; }
-      .page .inscription .black-bg .weather p span {
-        font-size: 2em; }
-  @media screen and (max-width: 991px) {
-    .page .inscription .black-bg {
-      margin-top: 5rem; } }
-  .page .inscription form.modif label {
-    font-weight: 400; }
-    .page .inscription form.modif label.telephone {
-      margin-top: 1.2rem; }
-  .page .inscription form.modif .input-group {
-    margin-top: 0.5rem; }
-  .page .inscription form.modif p.changer {
-    margin-top: 3rem; }
-  .page .inscription form.modif button.button--wayra::before {
-    background: #2882aa; }
-  .page .inscription form.modif button.button--wayra {
-    font-size: 1.5rem;
-    background: #3399cc; }
-  .page .inscription h3 {
+      transition: all 0.3s ease-in-out; }
+      .page .error a:hover {
+        text-decoration: none;
+        background: white;
+        color: grey; }
+  .page .pad-element.inscription {
+    margin-top: 5rem;
+    background-color: rgba(230, 230, 230, 0.7); }
+  .page .header {
+    background: url("../img/proposer-min.png");
+    background-position: bottom;
+    background-size: cover;
     font-family: BebasNeue; }
-  @media screen and (max-width: 964px) {
-    .page .inscription .fancyOu {
-      margin-top: 2rem;
-      margin-bottom: 2rem; } }
-  .page .inscription .fancyOu::before {
-    margin-bottom: 1rem;
-    content: '';
-    display: block;
-    height: 5rem;
-    width: 100%;
-    background: url("../img/separator.png");
-    background-repeat: repeat-y;
-    background-position: center; }
-    @media screen and (max-width: 964px) {
-      .page .inscription .fancyOu::before {
-        display: inline-block;
-        width: 6rem;
-        height: inherit;
-        border-top: solid 1px black;
-        margin-bottom: 0.5rem;
-        margin-right: 1rem; } }
-  .page .inscription .fancyOu::after {
-    margin-top: 1rem;
-    content: '';
-    display: block;
-    height: 5rem;
-    width: 100%;
-    background: url("../img/separator.png");
-    background-repeat: repeat-y;
-    background-position: center; }
-    @media screen and (max-width: 964px) {
-      .page .inscription .fancyOu::after {
-        width: 6rem;
-        display: inline-block;
-        height: 0;
-        border-top: solid 1px black;
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-        margin-left: 1rem; } }
-  .page .inscription .checkbox {
-    margin-top: 1rem; }
-    .page .inscription .checkbox:last-child {
-      margin-top: 0.8rem; }
-    .page .inscription .checkbox a {
-      color: black;
-      text-decoration: underline;
-      transition: all 0.2s ease; }
-      .page .inscription .checkbox a:hover {
-        color: #79b42b; }
-  .page .inscription button {
-    margin-top: 2.5rem; }
-  .page .inscription .input-group {
-    margin-top: 2rem; }
-    .page .inscription .input-group input {
-      border-radius: 0;
-      border-right: none;
-      box-shadow: none;
-      transition: border-color ease-in-out 0.25s; }
-      .page .inscription .input-group input:focus {
-        border-color: #ccc;
-        border-bottom: 2px solid #79b42b; }
-    .page .inscription .input-group .input-group-addon {
-      border-radius: 0;
-      background: white;
-      border-left: none;
-      box-shadow: none; }
-      .page .inscription .input-group .input-group-addon i {
-        opacity: 0.3; }
-  .page .inscription .groupButtons {
-    width: 100%; }
-    .page .inscription .groupButtons .button {
-      display: inline-block; }
-    .page .inscription .groupButtons .facebook {
-      margin-left: 1rem;
-      min-width: 50px;
-      width: 1rem;
-      background: #4c66a4; }
-      .page .inscription .groupButtons .facebook:hover::before {
-        background: #45538a; }
-      .page .inscription .groupButtons .facebook i {
-        color: white; }
-  .page .inscription .voyages.cache {
-    display: none; }
-  .page .inscription .voyages .elem {
-    margin: 0.5rem 0rem; }
-    .page .inscription .voyages .elem .row {
-      border-radius: 5px;
-      margin-right: 0;
-      background: rgba(255, 255, 255, 0.5); }
-      .page .inscription .voyages .elem .row div:nth-child(2) {
-        border-right: solid darkgrey 2px;
-        border-left: solid darkgrey 2px; }
-      .page .inscription .voyages .elem .row div:nth-child(3) i {
-        margin-left: 0.5rem; }
-      .page .inscription .voyages .elem .row h4::before {
-        content: '\f041';
-        color: darkgray;
-        font-family: FontAwesome;
-        font-weight: normal;
-        font-style: normal;
-        display: inline-block;
-        text-decoration: inherit;
-        margin-right: 0.5rem; }
-      .page .inscription .voyages .elem .row h5.date::before {
-        content: "\f073";
-        color: darkgray;
-        font-family: FontAwesome;
-        font-weight: normal;
-        font-style: normal;
-        display: inline-block;
-        text-decoration: inherit;
-        margin-right: 0.5rem; }
-      .page .inscription .voyages .elem .row h5.heure::before {
-        content: "\f017";
-        color: darkgray;
-        font-family: FontAwesome;
-        font-weight: normal;
-        font-style: normal;
-        display: inline-block;
-        text-decoration: inherit;
-        margin-right: 0.5rem; }
-  .page .inscription .arrow-nav {
-    font-size: 2em;
-    transition: opacity ease 0.2s; }
-    .page .inscription .arrow-nav .arrow-left {
-      display: none; }
-    .page .inscription .arrow-nav:hover {
-      opacity: 0.5; }
-
-.page button.button--wayra {
-  background: #79b42b;
-  padding: 1rem;
-  width: 30%;
-  color: white;
-  font-size: 1.8rem;
-  font-weight: 800; }
-  .page button.button--wayra:hover::before {
-    background: #6da227; }
-
-.page .connexion {
-  padding-left: 0;
-  padding-right: 0; }
-  .page .connexion a.mdp {
-    color: gray;
-    text-decoration: none;
-    margin-top: 2rem;
-    padding: 0; }
-    @media screen and (max-width: 964px) {
-      .page .connexion a.mdp {
-        display: block;
-        margin-top: 2rem; } }
-    .page .connexion a.mdp:hover {
-      color: black; }
-  .page .connexion.facebook {
-    margin-top: 5rem; }
-    .page .connexion.facebook a {
-      background: #3b5998;
-      padding: 0;
+    .page .header h1 {
+      margin-top: 15rem;
+      margin-bottom: 25rem;
+      color: white;
+      padding: 1rem 2rem;
+      border: 4px solid white; }
+  .page .inscription {
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 3rem 5rem; }
+    .page .inscription .proposer label {
+      margin-top: 1rem; }
+    .page .inscription .proposer p.heure-middle {
+      margin-top: 1rem; }
+    .page .inscription .black-bg a:hover {
       text-decoration: none; }
-      .page .connexion.facebook a i {
-        background: #354f88;
-        font-size: 2.5rem;
-        padding: 1rem 2rem;
-        color: white; }
-      .page .connexion.facebook a p {
-        line-height: 45px;
-        vertical-align: middle;
-        margin-bottom: 0;
-        color: white;
-        padding: 0 1rem 0 0;
-        font-size: 1.5rem;
-        font-weight: 800; }
-        @media screen and (max-width: 1160px) and (min-width: 964px) {
-          .page .connexion.facebook a p {
-            font-size: 1rem; } }
-      .page .connexion.facebook a:hover::before {
-        background: #354f88; }
-  .page .connexion .button {
-    width: 100%; }
-
-.page div.inscrire p {
-  margin-top: 15rem; }
-  @media screen and (max-width: 964px) {
-    .page div.inscrire p {
-      margin-top: 2rem; } }
-
-.page div.inscrire a {
-  color: black;
-  text-decoration: none;
-  display: block;
-  font-family: SignPainter;
-  font-size: 2.5rem; }
-  .page div.inscrire a::before {
-    content: '-';
-    margin-right: 1rem; }
-  .page div.inscrire a::after {
-    content: '-';
-    margin-left: 1rem; }
-  .page div.inscrire a:hover {
-    opacity: 0.5; }
+    .page .inscription .black-bg .weather {
+      color: white;
+      padding: 2rem 2rem;
+      background: deepskyblue;
+      margin-bottom: 2rem; }
+      .page .inscription .black-bg .weather i {
+        font-size: 6rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem; }
+      .page .inscription .black-bg .weather img {
+        width: 50%; }
+        @media screen and (max-width: 991px) {
+          .page .inscription .black-bg .weather img {
+            width: 25%; } }
+      .page .inscription .black-bg .weather p {
+        margin-top: 1.7rem;
+        font-size: 1.5em; }
+        .page .inscription .black-bg .weather p span {
+          font-size: 2em; }
+    @media screen and (max-width: 991px) {
+      .page .inscription .black-bg {
+        margin-top: 5rem; } }
+    .page .inscription form.modif label {
+      font-weight: 400; }
+      .page .inscription form.modif label.telephone {
+        margin-top: 1.2rem; }
+    .page .inscription form.modif .input-group {
+      margin-top: 0.5rem; }
+    .page .inscription form.modif p.changer {
+      margin-top: 3rem; }
+    .page .inscription form.modif button.button--wayra::before {
+      background: #2882aa; }
+    .page .inscription form.modif button.button--wayra {
+      font-size: 1.5rem;
+      background: #3399cc; }
+    .page .inscription h3 {
+      font-family: BebasNeue; }
+    @media screen and (max-width: 964px) {
+      .page .inscription .fancyOu {
+        margin-top: 2rem;
+        margin-bottom: 2rem; } }
+    .page .inscription .fancyOu::before {
+      margin-bottom: 1rem;
+      content: '';
+      display: block;
+      height: 5rem;
+      width: 100%;
+      background: url("../img/separator.png");
+      background-repeat: repeat-y;
+      background-position: center; }
+      @media screen and (max-width: 964px) {
+        .page .inscription .fancyOu::before {
+          display: inline-block;
+          width: 6rem;
+          height: inherit;
+          border-top: solid 1px black;
+          margin-bottom: 0.5rem;
+          margin-right: 1rem; } }
+    .page .inscription .fancyOu::after {
+      margin-top: 1rem;
+      content: '';
+      display: block;
+      height: 5rem;
+      width: 100%;
+      background: url("../img/separator.png");
+      background-repeat: repeat-y;
+      background-position: center; }
+      @media screen and (max-width: 964px) {
+        .page .inscription .fancyOu::after {
+          width: 6rem;
+          display: inline-block;
+          height: 0;
+          border-top: solid 1px black;
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+          margin-left: 1rem; } }
+    .page .inscription .checkbox {
+      margin-top: 1rem; }
+      .page .inscription .checkbox:last-child {
+        margin-top: 0.8rem; }
+      .page .inscription .checkbox a {
+        color: black;
+        text-decoration: underline;
+        transition: all 0.2s ease; }
+        .page .inscription .checkbox a:hover {
+          color: #79b42b; }
+    .page .inscription button {
+      margin-top: 2.5rem; }
+    .page .inscription .input-group {
+      margin-top: 2rem; }
+      .page .inscription .input-group input {
+        border-radius: 0;
+        border-right: none;
+        box-shadow: none;
+        transition: border-color ease-in-out 0.25s; }
+        .page .inscription .input-group input:focus {
+          border-color: #ccc;
+          border-bottom: 2px solid #79b42b; }
+      .page .inscription .input-group .input-group-addon {
+        border-radius: 0;
+        background: white;
+        border-left: none;
+        box-shadow: none; }
+        .page .inscription .input-group .input-group-addon i {
+          opacity: 0.3; }
+    .page .inscription .groupButtons {
+      width: 100%; }
+      .page .inscription .groupButtons .button {
+        display: inline-block; }
+      .page .inscription .groupButtons .facebook {
+        margin-left: 1rem;
+        min-width: 50px;
+        width: 1rem;
+        background: #4c66a4; }
+        .page .inscription .groupButtons .facebook:hover::before {
+          background: #45538a; }
+        .page .inscription .groupButtons .facebook i {
+          color: white; }
+    .page .inscription .voyages.cache {
+      display: none; }
+    .page .inscription .voyages .elem {
+      margin: 0.5rem 0rem; }
+      .page .inscription .voyages .elem .row {
+        border-radius: 5px;
+        margin-right: 0;
+        background: rgba(255, 255, 255, 0.5); }
+        .page .inscription .voyages .elem .row div:nth-child(2) {
+          border-right: solid darkgrey 2px;
+          border-left: solid darkgrey 2px; }
+        .page .inscription .voyages .elem .row div:nth-child(3) i {
+          margin-left: 0.5rem; }
+        .page .inscription .voyages .elem .row h4::before {
+          content: '\f041';
+          color: darkgray;
+          font-family: FontAwesome;
+          font-weight: normal;
+          font-style: normal;
+          display: inline-block;
+          text-decoration: inherit;
+          margin-right: 0.5rem; }
+        .page .inscription .voyages .elem .row h5.date::before {
+          content: "\f073";
+          color: darkgray;
+          font-family: FontAwesome;
+          font-weight: normal;
+          font-style: normal;
+          display: inline-block;
+          text-decoration: inherit;
+          margin-right: 0.5rem; }
+        .page .inscription .voyages .elem .row h5.heure::before {
+          content: "\f017";
+          color: darkgray;
+          font-family: FontAwesome;
+          font-weight: normal;
+          font-style: normal;
+          display: inline-block;
+          text-decoration: inherit;
+          margin-right: 0.5rem; }
+    .page .inscription .arrow-nav {
+      font-size: 2em;
+      transition: opacity ease 0.2s; }
+      .page .inscription .arrow-nav .arrow-left {
+        display: none; }
+      .page .inscription .arrow-nav:hover {
+        opacity: 0.5; }
+  .page button.button--wayra {
+    background: #79b42b;
+    padding: 1rem;
+    width: 30%;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 800; }
+    .page button.button--wayra:hover::before {
+      background: #6da227; }
+  .page .connexion {
+    padding-left: 0;
+    padding-right: 0; }
+    .page .connexion a.mdp {
+      color: gray;
+      text-decoration: none;
+      margin-top: 2rem;
+      padding: 0; }
+      @media screen and (max-width: 964px) {
+        .page .connexion a.mdp {
+          display: block;
+          margin-top: 2rem; } }
+      .page .connexion a.mdp:hover {
+        color: black; }
+    .page .connexion.facebook {
+      margin-top: 5rem; }
+      .page .connexion.facebook a {
+        background: #3b5998;
+        padding: 0;
+        text-decoration: none; }
+        .page .connexion.facebook a i {
+          background: #354f88;
+          font-size: 2.5rem;
+          padding: 1rem 2rem;
+          color: white; }
+        .page .connexion.facebook a p {
+          line-height: 45px;
+          vertical-align: middle;
+          margin-bottom: 0;
+          color: white;
+          padding: 0 1rem 0 0;
+          font-size: 1.5rem;
+          font-weight: 800; }
+          @media screen and (max-width: 1160px) and (min-width: 964px) {
+            .page .connexion.facebook a p {
+              font-size: 1rem; } }
+        .page .connexion.facebook a:hover::before {
+          background: #354f88; }
+    .page .connexion .button {
+      width: 100%; }
+  .page div.inscrire p {
+    margin-top: 15rem; }
+    @media screen and (max-width: 964px) {
+      .page div.inscrire p {
+        margin-top: 2rem; } }
+  .page div.inscrire a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    font-family: SignPainter;
+    font-size: 2.5rem; }
+    .page div.inscrire a::before {
+      content: '-';
+      margin-right: 1rem; }
+    .page div.inscrire a::after {
+      content: '-';
+      margin-left: 1rem; }
+    .page div.inscrire a:hover {
+      opacity: 0.5; }
 
 .file-upload-input {
   display: none; }
@@ -357,3 +436,9 @@ body.proposer {
 
 body.proposer div.inscription {
   background-color: transparent !important; }
+
+.noMarginTop {
+  margin-top: -75px; }
+  @media screen and (max-width: 991px) {
+    .noMarginTop {
+      margin-top: 150px; } }

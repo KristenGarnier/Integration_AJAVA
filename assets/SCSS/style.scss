@@ -1,3 +1,4 @@
+$blue: #337ab7;
 @font-face {
   font-family: "BebasNeue";
   src: url('../font/BebasNeue.otf') format('opentype');
@@ -17,6 +18,10 @@ body {
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
+
+    &.page {
+      padding-bottom: 75px;
+    }
   }
 
   &.register {
@@ -43,7 +48,131 @@ body {
   }
 }
 
+/*/////////////HEADER\\\\\\\\\\\\\\\*/
+
+header {
+  font-family: "BebasNeue";
+  text-transform: uppercase;
+  font-size: 1.3em;
+
+  nav {
+    background-color: white !important;
+    border-color: white !important;
+    background-color: white;
+    height: 75px;
+    img {
+      vertical-align: middle;
+      margin-left: 5rem;
+    }
+
+    .navbar-toggle {
+      border: none;
+      background: transparent;
+      margin-top: 2rem;
+      span {
+        background: black !important;
+        transition: all ease-in-out 0.2s;
+      }
+
+      span:nth-child(2) {
+        transform: translateY(-140px);
+      }
+
+      span:nth-child(3) {
+        transform: rotate(45deg) translateX(-3px);
+      }
+      span:nth-child(4) {
+        transform: rotate(-45deg) translateY(-7px) translateX(3px);
+      }
+
+      &.collapsed {
+        background: transparent;
+        span:nth-child(2) {
+          transform: translateY(0px);
+        }
+
+        span:nth-child(3) {
+          transform: rotate(0deg) translateX(0px);
+        }
+        span:nth-child(4) {
+          transform: rotate(0deg) translateY(0px) translateX(0px);
+        }
+      }
+      &:hover {
+        background: transparent !important;
+      }
+      &:focus {
+        background: transparent !important;
+      }
+    }
+
+    .navbar-collapse {
+      @media screen and (max-width: 764px) {
+        margin-top: 1.5rem;
+        background-color: white;
+        border-color: white !important;
+      }
+    }
+
+    .navbar-right {
+
+      margin-top: 1.5rem;
+
+      li {
+
+        text-align: center;
+        margin-right: 5rem;
+
+        @media screen and (max-width: 1040px) {
+          margin-right: 1.5rem;
+        }
+        @media screen and (max-width: 764px) {
+          margin-right: 0;
+          margin-top: 2rem;
+        }
+
+        &:last-child {
+          margin-left: 12em;
+          @media screen and (max-width: 1040px) {
+            margin-left: 2rem;
+          }
+          @media screen and (max-width: 764px) {
+            margin-left: 0rem;
+            margin-top: 2rem;
+          }
+        }
+
+        &:nth-child(3) {
+          margin-right: 0;
+        }
+
+        a {
+          color: black !important;
+        }
+
+        button {
+
+          color: white;
+          margin-top: 0.4rem;
+          font-size: 1em;
+          border: none;
+          border-radius: 0;
+          padding-left: 4rem;
+          padding-right: 4rem;
+          background-color: $blue;
+          transition: all ease-in-out 0.2s;
+          &:hover {
+            color: white;
+            background-color: darken($blue, 10);
+          }
+        }
+      }
+    }
+  }
+}
+
 .page {
+  margin-top: 75px;
   .error {
     font-family: "BebasNeue";
     text-transform: uppercase;
@@ -489,4 +618,11 @@ body {
 
 body.proposer div.inscription{
   background-color: transparent !important;
+}
+
+.noMarginTop{
+  margin-top: -75px;
+  @media screen and (max-width : 991px) {
+    margin-top: 150px;
+  }
 }
