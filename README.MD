@@ -2,6 +2,11 @@
 
 Quelques travaux d'intégration pour AJAVA
 
+Mise en place des menus, cela implique :
+
+* Changements dans le HTML
+* Changements dans le CSS
+
 Technos utilisée :
 
 * Bootstrap
